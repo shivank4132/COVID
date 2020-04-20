@@ -1,0 +1,62 @@
+.geo-chart {   
+    max-width: 600px;
+}
+
+.country-card {
+    max-width: 300px;
+    max-height: 400px;
+}
+
+.selectcase {
+    width: 1020px;
+}
+
+.jumbotron {
+    width: 1366px;
+}
+
+
+@media only screen and (max-width : 375px){
+    .jumbotron{
+        width: 375px;
+        height: 640px;
+    }
+
+   .country-map{
+       display: inline;
+   }
+
+   .country-card{
+       margin-left: 35px;
+       
+   }
+   .selectcase{
+       width: 365px;
+      position: relative;
+      left: -2rem;
+      top: 1rem;
+   }
+    .selectcase div .check3{
+       margin-left: 136px;
+   }
+   .selectcase div .check4{
+       margin-left: 1.9rem;
+}
+
+.selectcase div .inline {
+    width: 365px;
+
+}
+
+.map{
+    display: inline;
+}
+.geo-chart{
+        display: none;
+}
+
+.pie-chart{
+    position: relative;
+    left: -4rem;
+}
+}
