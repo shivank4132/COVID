@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from 'src/app/services/data.service';
-import { GlobalDataSummary } from 'src/app/models/global-data';
+import { DataService } from '../../services/data.service';
+import { GlobalDataSummary } from '../../models/global-data';
+import { NewsData } from '../../models/global-data';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -15,10 +18,12 @@ export class HomeComponent implements OnInit {
   totalActive=0;
 
   datatable = [];
+
+  news:Observable<NewsData>;
   
   globalData: GlobalDataSummary[];
 
-    pie = 'PieChart'
+  pie = 'PieChart'
   geo = 'GeoChart'
   line = 'LineChart'
   constructor(private dataService: DataService) { }
@@ -49,13 +54,7 @@ export class HomeComponent implements OnInit {
         
       )
 
-      this.dataService.getnewsData().subscribe(
-        {
-          next: (newsResult)=>{
-            console.log(newsResult);
-          }
-        }
-      )
+    this.news=this.dataService.getNews();
 
   }
 

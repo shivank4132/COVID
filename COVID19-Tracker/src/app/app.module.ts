@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardCardComponent } from './components/home/dashboard-card/dashboard-card.component';
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { HelpLinkComponent } from './components/help-link/help-link.component';
+import { NewsComponent } from './components/home/news/news.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { HelpLinkComponent } from './components/help-link/help-link.component';
     DashboardCardComponent,
     FaqsComponent,
     HelpLinkComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,

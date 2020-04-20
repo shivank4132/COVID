@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { GlobalDataSummary } from '../models/global-data';
+import { NewsData } from '../models/global-data'
 
 @Injectable({
   providedIn: 'root'
@@ -57,13 +58,7 @@ export class DataService {
 
   }
 
-  getnewsData(){
-    return this.http.get(this.newsUrl,{responseType:'text'}).pipe(
-      map(newsResult=>{
-        let row= newsResult.split("\n")
-        return newsResult;
-      })
-    )
-    
+  getNews() {
+    return this.http.get<NewsData>(this.newsUrl);
   }
 }
