@@ -3,7 +3,6 @@ import { DataService } from '../../services/data.service';
 import { GlobalDataSummary } from '../../models/global-data';
 import { NewsData } from '../../models/global-data';
 import { Observable } from 'rxjs';
-import { Location } from '@angular/common';
 
 
 @Component({
@@ -26,13 +25,12 @@ export class HomeComponent implements OnInit {
 
   pie = 'PieChart'
   geo = 'GeoChart'
- // line = 'LineChart'
+  line = 'LineChart'
   constructor(private dataService: DataService) { }
 
 
 
   ngOnInit(): void {
-
 
     this.dataService.getData()
       .subscribe(
@@ -55,15 +53,14 @@ export class HomeComponent implements OnInit {
           }
         
       )
-          
-      setTimeout(()=>{
+
+     /*  setTimeout(()=>{
         window.location.reload()
-      },15000);
+      },15000); */
 
     this.news=this.dataService.getNews();
 
   }
-
 
 
 
