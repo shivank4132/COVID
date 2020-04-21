@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
   pie = 'PieChart'
   geo = 'GeoChart'
  // line = 'LineChart'
-  constructor(private dataService: DataService, private location: Location) { }
+  constructor(private dataService: DataService) { }
 
 
 
@@ -55,14 +55,16 @@ export class HomeComponent implements OnInit {
           }
         
       )
+          
+      setTimeout(()=>{
+        window.location.reload()
+      },15000);
 
     this.news=this.dataService.getNews();
 
   }
 
-  load(){
-    window.location.reload();
-  }
+
 
 
   updateChart(input: HTMLInputElement) {
