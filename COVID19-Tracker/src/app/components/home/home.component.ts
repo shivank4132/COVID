@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
   }
 
   load(){
-    location.reload();
+    window.location.reload();
   }
 
 
