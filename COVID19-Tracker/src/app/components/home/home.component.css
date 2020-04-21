@@ -17,8 +17,7 @@
 
 .news-data {
     max-height: 500px;
-    overflow: auto;
-    
+    overflow: auto;   
     border: 1px dotted gray;
 }
 

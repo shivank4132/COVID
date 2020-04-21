@@ -10,7 +10,7 @@ import { NewsData } from '../models/global-data'
 export class DataService {
 
   private dataUrl="https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/04-19-2020.csv";
-  private newsUrl="https://newsapi.org/v2/everything?q=COVID&from=2020-03-20&sortBy=publishedAt&apiKey=c59b8c3a9f6b496d9aeae04241b76937&pageSize=100&language=en";
+  private newsUrl="https://newsapi.org/v2/everything?q=COVID&from=2020-04-01&sortBy=publishedAt&apiKey=c59b8c3a9f6b496d9aeae04241b76937&pageSize=100&language=en";
   constructor(private http : HttpClient) { }
 
   getData(){

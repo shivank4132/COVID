@@ -64,7 +64,7 @@
       <h2 style="text-align: center;">World News</h2> 
   <hr>
   
-<div class="news-date m-4">
+<div class="news-data m-4">
   <ng-container *ngIf="news | async as news">
       <app-news *ngFor="let item of news.articles" [news]="item"></app-news>
   </ng-container>
