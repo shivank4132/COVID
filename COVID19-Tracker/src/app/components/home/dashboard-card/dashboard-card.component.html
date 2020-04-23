@@ -1,71 +1,71 @@
-<div class="row ml-0">
-    <div class="dashcard card col-sm-6 col-md-3 col-xs-12 p-3 m-4">
-        <div class="count row">
-          <div class="text col p-3 pt-4">
-            <div class="label">
-             <h4> Total Cases 
-               <img src="../../../../assets/images/Up-2.svg" alt="">
-             </h4>
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" class="main-cards">
+    <div class="dashcard card">
+        <div class="count" fxLayout="row">
+            <div class="text" fxLayout="column">
+                <div class="label">
+                    <h4> Total Cases
+                        <img src="../../../../assets/images/Up-2.svg" alt="">
+                    </h4>
+                </div>
+                <div class="value">
+                    <h2>{{totalConfirmed | number}}</h2>
+                </div>
             </div>
-            <div class="value pt-2">
-              <h2>{{totalConfirmed | number}}</h2>
-            </div>
-          </div>
             <div class="p-4">
-            <img src="../../../../assets/images/Graph-1.svg">
-          </div>
-          </div>
+                <img src="../../../../assets/images/Graph-1.svg">
+            </div>
+        </div>
     </div>
-    <div class="dashcard card col-sm-6 col-md-3 col-xs-12 p-3 m-4">
-        <div class="count row">
+    <div class="dashcard card">
+        <div class="count" fxLayout="row">
             <div class=" text col p-3 pt-4">
-              <div class="label">
-                <h4> Recovered
-                  <img src="../../../../assets/images/Down.svg" alt="">
-                </h4>
-               </div>
-               <div class="value pt-2">
-                 <h2>{{totalRecovered | number}}</h2>
-               </div>
+                <div class="label">
+                    <h4> Recovered
+                        <img src="../../../../assets/images/Down.svg" alt="">
+                    </h4>
+                </div>
+                <div class="value pt-2">
+                    <h2>{{totalRecovered | number}}</h2>
+                </div>
             </div>
-            <div class="p-4"> 
-                 <img src="../../../../assets/images/Graph-3.svg">
-            </div>
-          </div>
-    </div>
-    <div class="dashcard card col-sm-6 col-md-3 col-xs-12 p-3 m-4">
-        <div class="count row">
-           <div class="text col p-3 pt-4">
-            <div class="label">
-              <h4>Active Cases
-                <img src="../../../../assets/images/Up-2.svg" alt="">
-              </h4>
-            </div>
-            <div class="value pt-2">
-              <h2>{{totalActive | number}}</h2>
-            </div>
-           </div>
             <div class="p-4">
-              <img src="../../../../assets/images/Graph.svg">
+                <img src="../../../../assets/images/Graph-3.svg">
+            </div>
+        </div>
+    </div>
+    <div class="dashcard card">
+        <div class="count" fxLayout="row">
+            <div class="text col p-3 pt-4">
+                <div class="label">
+                    <h4>Active Cases
+                        <img src="../../../../assets/images/Up-2.svg" alt="">
+                    </h4>
+                </div>
+                <div class="value pt-2">
+                    <h2>{{totalActive | number}}</h2>
+                </div>
+            </div>
+            <div class="p-4">
+                <img src="../../../../assets/images/Graph.svg">
 
             </div>
-          </div>
+        </div>
     </div>
-    <div class="dashcard card col-sm-6 col-md-3 col-xs-12 p-3 m-4">
-        <div class="count row">
+    <div class="dashcard card">
+        <div class="count" fxLayout="row">
             <div class="text col p-3 pt-4">
-              <div class="label">
-                <h4>Total Death
-                  <img src="../../../../assets/images/Up-2.svg" alt="">
-                </h4>
-              </div>
-              <div class="value pt-2">
-               <h2> {{totalDeaths | number}}</h2>
-              </div>
+                <div class="label">
+                    <h4>Total Death
+                        <img src="../../../../assets/images/Up-2.svg" alt="">
+                    </h4>
+                </div>
+                <div class="value pt-2">
+                    <h2> {{totalDeaths | number}}</h2>
+                </div>
             </div>
             <div class="p-4">
-              <img src="../../../../assets/images/Graph-2.svg">
+                <img src="../../../../assets/images/Graph-2.svg">
             </div>
-          </div>
+        </div>
     </div>
 </div>

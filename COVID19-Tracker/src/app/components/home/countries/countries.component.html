@@ -1,13 +1,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<div class="bg-white card ml-1 py-2">
+<div class="countries">
     <div class="m-2">
         <div class="p-1">
-            <table>
-                <tr>
-                    <th>
+            <table fxLayout="column" fxLayoutAlign="center start" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center">
+                <tr class="heading">
+                    <th fxLayout="column" fxLayoutAlign="start center">
                         <label for="Country">&nbsp;&nbsp;Select Country</label>
-                        <select name="" id="c" class="form-control p-2 m-1 my-1" #input (change)='updateValues(input.value)'>
+                        <select name="" id="c" class="drop-down form-control p-2 m-1 my-1" #input (change)='updateValues(input.value)'>
                             <option value="" disabled selected>Search Location</option>
                             <option value="{{con}}" *ngFor='let con of countries'>{{con}}</option>
                         </select>
@@ -16,60 +16,60 @@
                 <tr>
                     <div class="card col  m-1 my-1 pb-2">
                         <div class="count row">
-                          <div class="col ">
-                            <div class="label p-1">
-                             <h4> Total Cases</h4>
+                            <div class="col ">
+                                <div class="label p-1">
+                                    <h4> Total Cases</h4>
+                                </div>
+                                <div class="value">
+                                    <h2>{{totalConfirmed | number }}</h2>
+                                </div>
                             </div>
-                            <div class="value">
-                              <h2>{{totalConfirmed | number }}</h2>
-                            </div>
-                          </div>
-                        
-                          </div>
+
+                        </div>
                     </div>
                 </tr>
                 <tr>
                     <div class="card col m-1 my-1 pb-2">
                         <div class="count row">
                             <div class="col ">
-                              <div class="label p-1">
-                                <h4> Recovered</h4>
-                               </div>
-                               <div class="value">
-                                 <h2>{{totalRecovered | number}}</h2>
-                               </div>
+                                <div class="label p-1">
+                                    <h4> Recovered</h4>
+                                </div>
+                                <div class="value">
+                                    <h2>{{totalRecovered | number}}</h2>
+                                </div>
                             </div>
-                           
-                          </div>
+
+                        </div>
                     </div>
                 </tr>
                 <tr>
                     <div class="card col m-1 my-1 ">
                         <div class="count row">
-                           <div class="col ">
-                            <div class="label p-1">
-                              <h4>Active Cases</h4>
+                            <div class="col ">
+                                <div class="label p-1">
+                                    <h4>Active Cases</h4>
+                                </div>
+                                <div class="value">
+                                    <h2>{{totalActive | number}}</h2>
+                                </div>
                             </div>
-                            <div class="value">
-                              <h2>{{totalActive | number}}</h2>
-                            </div>
-                           </div>
-                          </div>
+                        </div>
                     </div>
                 </tr>
                 <tr>
                     <div class="card col m-1 my-1">
                         <div class="count row">
                             <div class="col">
-                              <div class="label p-1">
-                                <h4>Total Death</h4>
-                              </div>
-                              <div class="value">
-                               <h2> {{totalDeaths | number}}</h2>
-                              </div>
+                                <div class="label p-1">
+                                    <h4>Total Death</h4>
+                                </div>
+                                <div class="value">
+                                    <h2> {{totalDeaths | number}}</h2>
+                                </div>
                             </div>
-                           
-                          </div>
+
+                        </div>
                     </div>
                 </tr>
             </table>

@@ -1,21 +1,20 @@
- 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <header class="ml-0">
-    <a class="logo" routerLink="/home">
-      <img src="../assets/images/virus.svg" alt="Virus">
-      <span>covid'19</span>
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<header fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="space-around center" fxLayoutAlign.sm="center center" fxLayoutAlign.xs="center center" fxLayoutGap.sm="0" fxLayoutGap.xs="0">
+    <a class="logo" routerLink="/home" fxLayout="row" fxLayoutAlign="center center">
+        <img src="../assets/images/virus.svg" alt="Virus">
+        <span>covid'19</span>
     </a>
     <nav>
-      <ul>
-        <li routerLinkActive="active" class="navlink">
-          <a routerLink="/home">Home</a>
-        </li>
-        <li routerLinkActive="active" class="navlink">
-          <a routerLink="/faqs">faq</a>
-        </li>
-        <li routerLinkActive="active" class="navlink">
-          <a routerLink="/help-link">helpful &nbsp;links</a>
-        </li>
-      </ul>
+        <ul fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center center" fxLayoutGap="5%" fxLayoutGap.sm="0" fxLayoutGap.xs="0">
+            <li routerLinkActive="active" class="navlink">
+                <a routerLink="/home">Home</a>
+            </li>
+            <li routerLinkActive="active" class="navlink">
+                <a routerLink="/faqs">faq</a>
+            </li>
+            <li routerLinkActive="active" class="navlink">
+                <a routerLink="/help-link">helpful links</a>
+            </li>
+        </ul>
     </nav>
-  </header>
+</header>

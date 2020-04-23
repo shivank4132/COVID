@@ -1,11 +1,16 @@
 .card {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
     border-radius: 0.7rem;
     background-color: #ffffff;
-    max-width: 291px;
+    /* max-width: 291px; */
+    padding: 2rem;
+    margin-top: 1rem;
 }
 
+.card:last-child{
+    width: 237px;
+}
 
 .card .count>h3 {
     font-size: 1.6rem;
@@ -13,9 +18,13 @@
     margin-top: 1rem;
 }
 
+.main-cards {
+    margin-top: 1rem;
+}
 
-@media only screen and (max-width : 375px){
-    .row{
+
+/* @media only screen and (max-width: 375px) {
+    .row {
         display: inline;
     }
     .card {
@@ -23,16 +32,12 @@
         max-width: 90%;
         max-height: 7rem;
         text-align: center;
-        
     }
-
-    .text{
+    .text {
         position: relative;
         bottom: 30px;
     }
-
-    .card div .p-4{
+    .card div .p-4 {
         display: none;
     }
-    
-}
+} */

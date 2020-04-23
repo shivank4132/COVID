@@ -1,78 +1,71 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div class="jumbotron">
 
-<div class="jumbotron bg-white py-2 mb-3 ml-0 pl-2">
-    
-    <app-dashboard-card [totalConfirmed]='totalConfirmed' [totalRecovered]='totalRecovered' [totalActive]='totalActive' [totalDeaths]='totalDeaths' ></app-dashboard-card>
+    <app-dashboard-card [totalConfirmed]='totalConfirmed' [totalRecovered]='totalRecovered' [totalActive]='totalActive' [totalDeaths]='totalDeaths'></app-dashboard-card>
 </div>
 
-<div class="row ml-0 country-map">
+<div fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign="space-around start" fxLayoutAlign.sm="start center" fxLayoutAlign.xs="start center" fxLayoutGap.sm="5%" fxLayoutGap.xs="5%" class="world-data">
 
-  <div class="col pr-1 pl-2 country-card"> 
-     <app-countries></app-countries>
-  </div>
-  
-  <div>  
-    <div class="selectcase row ml-5">
-      <div class="ui form">
-        <div class="inline fields">
-          <label for="cases">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select case type : </label>
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input type="radio" value="c" id="c" name="casetype" #c (click)='updateChart(c)' checked="" tabindex="0" class="hidden">
-              <label for="c">Confirmed</label>
+    <div>
+        <app-countries></app-countries>
+    </div>
+
+
+    <div class="selectcase">
+        <div class="ui form" fxLayout="column">
+            <div class="inline fields">
+                <label for="cases">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select case type : </label>
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" value="c" id="c" name="casetype" #c (click)='updateChart(c)' checked="" tabindex="0" class="hidden">
+                        <label for="c">Confirmed</label>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="ui radio checkbox">
+                        <input type="radio" id="r" value="r" name="casetype" #r (click)='updateChart(r)' tabindex="0" class="hidden">
+                        <label for="r">Recovered</label>
+                    </div>
+                </div>
+                <div class="field check3">
+                    <div class="ui radio checkbox">
+                        <input type="radio" id="a" value="a" name="casetype" #a (click)='updateChart(a)' tabindex="0" class="hidden">
+                        <label for="a">Active</label>
+                    </div>
+                </div>
+                <div class="field check4">
+                    <div class="ui radio checkbox">
+                        <input type="radio" id="d" value="d" name="casetype" #d (click)='updateChart(d)' tabindex="0" class="hidden">
+                        <label for="d">Deaths</label>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="field">
-            <div class="ui radio checkbox">
-              <input type="radio" id="r" value="r" name="casetype" #r (click)='updateChart(r)' tabindex="0" class="hidden">
-              <label for="r">Recovered</label>
+            <div class="geo-chart">
+                <google-chart [data]="datatable" [type]='geo' [options]="{height : 340,
+              colors:['#f5c3c6','#f8d6da','#ec5855','#eb453d']}"></google-chart>
             </div>
-          </div>
-          <div class="field check3">
-            <div class="ui radio checkbox">
-              <input type="radio" id="a" value="a" name="casetype" #a (click)='updateChart(a)' tabindex="0" class="hidden">
-              <label for="a">Active</label>
-            </div>
-          </div>
-          <div class="field check4">
-            <div class="ui radio checkbox">
-              <input type="radio" id="d" value="d" name="casetype" #d (click)='updateChart(d)' tabindex="0" class="hidden">
-              <label for="d">Deaths</label>
-            </div>
-          </div>
         </div>
-      </div>  
 
     </div>
 
-
-    <div class="row map ml-1">
-      <div class="col col-xs-12 geo-chart">
-        <google-chart [data]="datatable" [type]='geo' 
-        [options]="{height : 340,width:600,
-          colors:['#f5c3c6','#f8d6da','#ec5855','#eb453d']}"></google-chart>
-      </div>
-      <div class="col pie-chart col-xs-12 ml-5">
-        <google-chart [data]="datatable" [type]='pie' [options]="{height:340, width: 375}"></google-chart>
-      </div>
+    <div class="piechart">
+        <google-chart [data]="datatable" [type]='pie' [options]="{height:372, width: 375}"></google-chart>
     </div>
 
-  </div>
- 
+
 </div>
 <hr>
-      <h2 style="text-align: center;">World News</h2> 
-  <hr>
-  
-<div class="news-data m-4">
-  <ng-container *ngIf="news | async as news">
-      <app-news *ngFor="let item of news.articles" [news]="item"></app-news>
-  </ng-container>
+<h2 style="text-align: center;">World News</h2>
+<hr>
+
+<div class="news-data">
+    <ng-container *ngIf="news | async as news">
+        <app-news *ngFor="let item of news.articles" [news]="item"></app-news>
+    </ng-container>
 </div>
 
 
 
-<!-- 
+<!--
 <hr>
 <div class="col">
   <google-chart [data]="datatable" [type]='line' [options]="{height : 500, width : 700}"></google-chart>

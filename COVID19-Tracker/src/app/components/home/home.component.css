@@ -1,4 +1,4 @@
-.geo-chart {   
+/* .geo-chart {
     max-width: 600px;
 }
 
@@ -11,58 +11,87 @@
     width: 1020px;
 }
 
-.jumbotron {
-    width: 1366px;
+
+
+
+@media only screen and (max-width: 375px) {
+    .jumbotron {
+        max-width: 375px;
+        max-height: 650px;
+    }
+    .country-map {
+        display: inline;
+    }
+    .country-card {
+        margin-left: 35px;
+    }
+    .selectcase {
+        width: 365px;
+        position: relative;
+        left: -2rem;
+        top: 1rem;
+    }
+    .selectcase div .check3 {
+        margin-left: 136px;
+    }
+    .selectcase div .check4 {
+        margin-left: 1.9rem;
+    }
+    .selectcase div .inline {
+        width: 365px;
+    }
+    .map {
+        display: inline;
+    }
+    .geo-chart {
+        display: none;
+    }
+    .pie-chart {
+        position: relative;
+        left: -4rem;
+    }
+} */
+
+
+.world-data {
+    /* padding: 1rem; */
+    margin-top: 2rem;
+}
+
+.selectcase {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.piechart {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.geo-chart google-chart {
+    width: 600px;
 }
 
 .news-data {
     max-height: 500px;
-    overflow: auto;   
+    overflow: auto;
     border: 1px dotted gray;
+    margin: 2rem;
 }
 
-
-@media only screen and (max-width : 375px){
-    .jumbotron{
-        max-width: 375px;
-        max-height: 650px;
+@media only screen and (max-width: 959px) {
+    .geo-chart google-chart {
+        width: 300px;
     }
-
-   .country-map{
-       display: inline;
-   }
-
-   .country-card{
-       margin-left: 35px;
-       
-   }
-   .selectcase{
-       width: 365px;
-      position: relative;
-      left: -2rem;
-      top: 1rem;
-   }
-    .selectcase div .check3{
-       margin-left: 136px;
-   }
-   .selectcase div .check4{
-       margin-left: 1.9rem;
 }
 
-.selectcase div .inline {
-    width: 365px;
-
-}
-
-.map{
-    display: inline;
-}
-.geo-chart{
-        display: none;
-}
-
-.pie-chart{
-    position: relative;
-    left: -4rem;
-}
+@media only screen and (max-width : 568px){
+    .geo-chart{
+        display: none
+    }
+    .piechart{
+        padding: 0;
+    }
 }

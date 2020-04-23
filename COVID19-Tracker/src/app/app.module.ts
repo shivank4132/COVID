@@ -13,6 +13,8 @@ import { DashboardCardComponent } from './components/home/dashboard-card/dashboa
 import { FaqsComponent } from './components/faqs/faqs.component';
 import { HelpLinkComponent } from './components/help-link/help-link.component';
 import { NewsComponent } from './components/home/news/news.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { NewsComponent } from './components/home/news/news.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleChartsModule.forRoot()
+    GoogleChartsModule.forRoot(),
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

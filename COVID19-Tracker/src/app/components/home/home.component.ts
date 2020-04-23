@@ -54,10 +54,10 @@ export class HomeComponent implements OnInit {
         
       )
 
-       setTimeout(()=>{
+        setTimeout(()=>{
         window.location.reload()
       },15000); 
-
+ 
     this.news=this.dataService.getNews();
 
   }
